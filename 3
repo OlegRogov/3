@@ -1,0 +1,18 @@
+n=int(input())
+v=list(map(int,input().split()))
+d=int(input())
+f=list(map(int,input().split()))
+k=[]
+o=0
+for i in range(n+1):
+    if o>0:
+        k.append(v[i-1]) 
+    if i>n-1:
+        break
+    for j in range(d):
+        o+=1
+        if v[i]==f[j]:
+            o=0
+            break
+
+print(' '.join(map(str,k)))
